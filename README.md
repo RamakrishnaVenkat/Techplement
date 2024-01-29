@@ -26,19 +26,19 @@ Deployment Steps
 3. Create an S3 Bucket:**
 
     ```bash
-    aws s3api create-bucket --bucket YOUR_UNIQUE_BUCKET_NAME --region YOUR_REGION
+    aws s3api create-bucket --bucket techplemet --region YOUR_REGION
     ```
 
 4. Configure Bucket for Static Website Hosting:**
 
     ```bash
-    aws s3 website s3://YOUR_UNIQUE_BUCKET_NAME/ --index-document index.html
+    aws s3 website s3://techplemet/ --index-document index.html
     ```
 
 5. Upload Website Files to S3 Bucket:**
 
     ```bash
-    aws s3 sync . s3://YOUR_UNIQUE_BUCKET_NAME/
+    aws s3 sync . s3://techplemet/
     ```
 
 6. Access the Static Counter Website:**
@@ -46,7 +46,7 @@ Deployment Steps
     Your static counter website is now hosted on AWS S3. Access it using the endpoint:
 
     ```
-    http://YOUR_UNIQUE_BUCKET_NAME.s3-website-YOUR_REGION.amazonaws.com
+    http://techplemet.s3-website-Asia Pacific (Mumbai) ap-south-1.amazonaws.com
     ```
 
 Cleanup (Optional)
@@ -56,7 +56,7 @@ If you want to remove the resources created:
 1. Delete S3 Bucket:**
 
     ```bash
-    aws s3 rb s3://YOUR_UNIQUE_BUCKET_NAME --force
+    aws s3 rb s3://techplemet --force
     ```
 
 2. Remove Local Clone (Optional):
