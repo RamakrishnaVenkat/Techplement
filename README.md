@@ -12,36 +12,36 @@ Before deploying the website on AWS, make sure you have the following:
 
 Deployment Steps
 
-1. Clone the Repository:**
+1. Clone the Repository:
 
     ```bash
     git clone https://github.com/your-username/static-counter-website.git
     cd static-counter-website
     ```
 
-2. Update Counter Logic (Optional):**
+2. Update Counter Logic (Optional):
 
     If you want to customize the counter logic, navigate to the `index.html` file and make adjustments as needed.
 
-3. Create an S3 Bucket:**
+3. Create an S3 Bucket:
 
     ```bash
     aws s3api create-bucket --bucket techplemet --region YOUR_REGION
     ```
 
-4. Configure Bucket for Static Website Hosting:**
+4. Configure Bucket for Static Website Hosting:
 
     ```bash
     aws s3 website s3://techplemet/ --index-document index.html
     ```
 
-5. Upload Website Files to S3 Bucket:**
+5. Upload Website Files to S3 Bucket:
 
     ```bash
     aws s3 sync . s3://techplemet/
     ```
 
-6. Access the Static Counter Website:**
+6. Access the Static Counter Website:
 
     Your static counter website is now hosted on AWS S3. Access it using the endpoint:
 
@@ -53,7 +53,7 @@ Cleanup (Optional)
 
 If you want to remove the resources created:
 
-1. Delete S3 Bucket:**
+1. Delete S3 Bucket:
 
     ```bash
     aws s3 rb s3://techplemet --force
